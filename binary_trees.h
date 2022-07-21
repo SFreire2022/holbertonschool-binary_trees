@@ -75,5 +75,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second);
 /* Advanced 2 level order traversal */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+/* Aux function for advanced 2 */
+void print_slevel(const binary_tree_t *tree, int level, void (*func)(int));
 
 #endif
