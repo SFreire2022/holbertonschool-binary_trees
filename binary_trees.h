@@ -77,5 +77,7 @@ const binary_tree_t *second);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 /* Aux function for advanced 2 */
 void print_slevel(const binary_tree_t *tree, int level, void (*func)(int));
+/* Advanced 3 is complete */
+int binary_tree_is_complete(const binary_tree_t *tree);
 
 #endif
