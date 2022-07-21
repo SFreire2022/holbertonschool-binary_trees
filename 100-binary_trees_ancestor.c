@@ -13,13 +13,11 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 {
 	if (!first || !second)
 		return (NULL);
-	if (first->parent == second)
-		return (first->parent);
-	if (second->parent == first)
-		return (second->parent);
+	if (first == second)
+		return ((binary_tree_t *)first);
 	if (binary_tree_depth(first) > binary_tree_depth(second))
-		first = first->parent;
-	else
-		second = second->parent;
-	return (binary_trees_ancestor(first, second));
+		return (binary_trees_ancestor(first->parent, second));
+	if (binary_tree_depth(first) < binary_tree_depth(second))
+		return (binary_trees_ancestor(first, second->parent));
+	return (binary_trees_ancestor(first->parent, second->parent));
 }
