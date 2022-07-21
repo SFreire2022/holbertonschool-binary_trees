@@ -10,7 +10,6 @@
  * if tree is unbalanced to right, return negative weight value.
  * if tree is balanced, return 0.
 */
-
 int binary_tree_balance(const binary_tree_t *tree)
 {
 	int balance_factor = 0;
